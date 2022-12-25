@@ -30,10 +30,57 @@
                     <li class="nav-item"><a class="nav-link" href="contactus.html"><span class="fa fa-address-card fa-lg"></span>
                             Contact</a></li>
                 </ul>
+                <span class="navbar-text">
+                    <a href="" data-target="#loginModal" data-toggle="modal">
+                        <span class="fa fa-sign-in"></span> Login
+                    </a>
+                </span>
             </div>
 
         </div>
     </nav>
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"> Login</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-6">
+                                <label for="username" class="sr-only">Username</label>
+                                <input type="email" class="form-control" id="username" name="username"
+                                    placeholder="Username">
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label for="password" class="sr-only">Password</label>
+                                <input type="password" class="form-control" id="password" name="password"
+                                    placeholder="Password">
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="remember" name="remember">
+                                    <label for="remember" class="form-check-label">Remember me</label>
+                                </div>
+                            </div>
+                            <div class="form-row col-12">
+                                <button type="button" class="btn btn-secondary btn-sm ml-auto"
+                                    data-dismiss="modal">Cacel</button>
+    
+    
+                                <button type="submit" class="btn btn-primary btn-sm ml-1"> Sign in</button>
+                            </div>
+                        </div>
+    
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -46,12 +93,14 @@
                     <img src="img/logo.png" alt="logo" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                    <button class="btn btn-warning">
+                    <a class="btn btn-warning btn-block nav-link" role="button" href="#reservationform" data-html="true"
+                        data-toggle="tooltip" title="Or Call us at <br> <strong>+237674270063</strong>" data-placement="bottom">
                         Reserve Table
-                    </button>
+                    </a>
+
                 </div>
-                </div>
-                </div>
+            </div>
+            </div>
     </header>
 
     <div class="container">
@@ -72,7 +121,7 @@
                     </div>
                 </div>
             </div>
-            </div>
+        </div>
 
 
         <div class="row row-content align-items-center">
@@ -83,12 +132,14 @@
                 <div class="media">
                     <div class="media-body">
                         <h2 class>Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
-                        <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers,
-                            six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just
+                        <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing
+                            appetizers,
+                            six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for
+                            just
                             $19.99 per person </p>
                     </div>
-            <img src="img/buffet.png" alt="" class="d-flex ml-3 img-thumbnail align-self-center">
-            </div>
+                    <img src="img/buffet.png" alt="" class="d-flex ml-3 img-thumbnail align-self-center">
+                    </div>
             </div>
         </div>
 
@@ -100,133 +151,143 @@
                 <div class="media">
                     <img src="img/alberto.png" class="d-flex mr-3 img-thumbnail align-self-center" alt="Alberto">
                     <div class="media-body">
-                    <h2>Alberto Somayya</h2>
-                    <h4>Executive Chef</h4>
-                    <p>Award winning three-star Michelin chef with wide International experience having worked closely
-                        with
-                        whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion
-                        experiences. </p>
+                        <h2>Alberto Somayya</h2>
+                        <h4>Executive Chef</h4>
+                        <p>Award winning three-star Michelin chef with wide International experience having worked
+                            closely
+                            with
+                            whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion
+                            experiences. </p>
                     </div>
-                    </div>
-                    </div>
-                    </div>
-                    
-                    <div class="row row-contennt my-5">
-                        <div class="col-sm-8 offset-sm-2">
-                            <div class="card">
-                                <h3 class="card-header bg-warning text-white">
-                                    Reserve a Table
-                                </h3>
-                                <div class="card-body">
-                    
-                                    <form action="POST">
-                                        <div class="row">
-                                            <div class="col-12 col-sm-2">
-                                                <p> Number of guest</p>
-                                            </div>
-                                            <div class="col-12 col-sm-10 align-content-start">
-                                                <div class="form-group row">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="one" id="one">
-                                                        <label class="form-check-label mr-3" for="one">
-                                                            1
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="two" id="two">
-                                                        <label class="form-check-label mr-3" for="two">
-                                                            2
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="three" id="three">
-                                                        <label class="form-check-label mr-3" for="three">
-                                                            3
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="four" id="four">
-                                                        <label class="form-check-label mr-3" for="four">
-                                                            4
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="five" id="five">
-                                                        <label class="form-check-label mr-3" for="five">
-                                                            5
-                                                        </label>
-                                                    </div>
+                </div>
+                </div>
+                </div>
+                
+                <div class="row row-contennt my-5">
+                    <div class="col-sm-8 offset-sm-2">
+                        <div class="card">
+                            <h3 class="card-header bg-warning text-white">
+                                Reserve a Table
+                            </h3>
+                            <div class="card-body">
+                
+                                <form action="POST">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-2">
+                                            <p> Number of guest</p>
+                                        </div>
+                                        <div class="col-12 col-sm-10 align-content-start">
+                                            <div class="form-group row">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="one" id="one">
+                                                    <label class="form-check-label mr-3" for="one">
+                                                        1
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="two" id="two">
+                                                    <label class="form-check-label mr-3" for="two">
+                                                        2
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="three" id="three">
+                                                    <label class="form-check-label mr-3" for="three">
+                                                        3
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="four" id="four">
+                                                    <label class="form-check-label mr-3" for="four">
+                                                        4
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="five" id="five">
+                                                    <label class="form-check-label mr-3" for="five">
+                                                        5
+                                                    </label>
                                                 </div>
                                             </div>
-                    
                                         </div>
-                                        <div class="form-group row">
-                                            <label for="date" class="col-md-2 col-form-label"> Date and Time</label>
-                                            <div class="col-12 col-md-3">
-                                                <input type="num" name="date" id="date" placeholder="Date">
-                                            </div>
-                                            <div class="col-12 col-md-3">
-                                                <input type="num" name="time" id="time" placeholder="Time">
-                                            </div>
+                
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="date" class="col-md-2 col-form-label"> Date and Time</label>
+                                        <div class="col-12 col-md-3">
+                                            <input type="num" name="date" id="date" placeholder="Date">
                                         </div>
-                                        <div class="form-group row">
-                                            <div class="offset-md-2 col-md-10">
-                                                <button type="submit" class="btn btn-primary">
-                                                    Reserve
-                                                </button>
-                    
-                                            </div>
+                                        <div class="col-12 col-md-3">
+                                            <input type="num" name="time" id="time" placeholder="Time">
                                         </div>
-                    
-                                    </form>
-                    
-                                    </form>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="offset-md-2 col-md-10">
+                                            <button type="submit" class="btn btn-primary">
+                                                Reserve
+                                            </button>
+                
+                                        </div>
+                                    </div>
+                
+                                </form>
+                
+                                </form>
                             </div>
-            </div>
-        </div>
-    </div>
+                        </div>
+                        </div>
+                        </div>
 
-    <footer class="footer">
-        <div class="contaioer">
-            <div class="row">
-                <div class="col-4 offset-1 col-sm-2">
-                    <h5>Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="aboutus.html">About</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="contactus.html">Contact</a></li>
-                    </ul>
+        <footer class="footer">
+            <div class="contaioer">
+                <div class="row">
+                    <div class="col-4 offset-1 col-sm-2">
+                        <h5>Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="aboutus.html">About</a></li>
+                            <li><a href="#">Menu</a></li>
+                            <li><a href="contactus.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-7 col-sm-5">
+                        <h5>Our Address</h5>
+                        <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
+                        <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
+                        <i class="fa fa-envelope fa-lg"></i>:
+                        <a href="mailto:confusion@food.net">confusion@food.net</a>
+                    </div>
+                    <div class="col-12 col-sm-4  align-self-center">
+                        <div class="text-center ">
+                            <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i
+                                    class="fa fa-google-plus"></i></a>
+                            <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i
+                                    class="fa fa-facebook"></i></a>
+                            <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i
+                                    class="fa fa-linkedin"></i></a>
+                            <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i
+                                    class="fa fa-twitter"></i></a>
+                            <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i
+                                    class="fa fa-youtube"></i></a>
+                            <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-7 col-sm-5">
-                    <h5>Our Address</h5>
-                    <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
-                    <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
-                    <i class="fa fa-envelope fa-lg"></i>:
-                    <a href="mailto:confusion@food.net">confusion@food.net</a>
-                </div>
-                <div class="col-12 col-sm-4  align-self-center">
-                    <div class="text-center ">
-                        <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
-                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i
-                                class="fa fa-facebook"></i></a>
-                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
-                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
-                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
-                        <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+                <div class="row justify-content-center">
+                    <div class="col-auto">
+                        <p>© Copyright 2018 Ristorante Con Fusion</p>
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-auto">
-                    <p>© Copyright 2018 Ristorante Con Fusion</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        </footer>
+        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('[data-toogle="tooltip"]').tooltip();
+            });
+        </script>
 </body>
 
 </html>
