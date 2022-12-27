@@ -80,7 +80,7 @@
                 </div>
                 </div>
                 </div>
-                </div>
+            </div>
                 <div class="modal fade" id="reservationModal" role="dialog">
                     <div class="modal-dialog modal-lg" role="content">
                         <div class="modal-content">
@@ -166,13 +166,16 @@
                                         <div class="offset-md-2 col-md-10">
                                             <a href="#" class="btn btn-secondary btn-lg active" role="button"
                                                 aria-pressed="true">Cancel</a>
+                
                                             <a href="#" class="btn btn-primary btn-lg active" role="button"
                                                 aria-pressed="true">Reserve</a>
-                
+                                            
                                         </div>
                                     </div>
+                                    </form>
                 
                                 </form>
+                                </div>
 
                 </div>
             </div>
@@ -255,87 +258,17 @@
                     <a href="#mycarousel" class="carousel-control-next" role="button" data-slide="next">
                         <span class="carousel-control-next-icon"> </span>
                     </a>
-                </div>
-                </div>
-
-        </div>
-
-        <div class="row row-contennt my-5">
-            <div class="col-sm-8 offset-sm-2">
-                <div class="card">
-                    <h3 class="card-header bg-warning text-white">
-                        Reserve a Table
-                    </h3>
-                    <div class="card-body">
-
-                        <form action="POST">
-                            <div class="row">
-                                <div class="col-12 col-sm-2">
-                                    <p> Number of guest</p>
-                                </div>
-                                <div class="col-12 col-sm-10 align-content-start">
-                                    <div class="form-group row">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="one" id="one">
-                                            <label class="form-check-label mr-3" for="one">
-                                                1
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="two" id="two">
-                                            <label class="form-check-label mr-3" for="two">
-                                                2
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="three" id="three">
-                                            <label class="form-check-label mr-3" for="three">
-                                                3
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="four" id="four">
-                                            <label class="form-check-label mr-3" for="four">
-                                                4
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="five" id="five">
-                                            <label class="form-check-label mr-3" for="five">
-                                                5
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="form-group row">
-                                <label for="date" class="col-md-2 col-form-label"> Date and Time</label>
-                                <div class="col-12 col-md-3">
-                                    <input type="num" name="date" id="date" placeholder="Date">
-                                </div>
-                                <div class="col-12 col-md-3">
-                                    <input type="num" name="time" id="time" placeholder="Time">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="offset-md-2 col-md-10">
-                                    <button type="submit" class="btn btn-primary">
-                                        Reserve
-                                    </button>
-
-                                </div>
-                            </div>
-
-                        </form>
-
-                        </form>
+                    <button class="btn btn-danger btn-sm" id="carouselButton">
+                        <span id="carousel-button-icon" class="fa fa-pause"></span>
+                    </button>
                     </div>
-                </div>
-            </div>
-        </div>
+                    </div>
 
-        <footer class="footer">
+    </div>
+    </div>
+
+
+        <footer class="footer mt-20">
             <div class="contaioer">
                 <div class="row">
                     <div class="col-4 offset-1 col-sm-2">
@@ -380,11 +313,26 @@
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-        <!-- <script>
+        <script>
             $(document).ready(function () {
-                $('[data-toogle="tooltip"]').tooltip();
+                $("#mycarousel").carousel({ interval: 2000 });
+                $("#carouselButton").click(function () {
+                    if ($("#carouselButton").children("span").hasClass('fa-pause')) {
+                        console.log("button clicked");
+                        $('#mycarousel').carousel('pause');
+                        $("#carouselButton").children("span").removeClass("fa-pause");
+                        $("#carouselButton").children("span").addClass("fa-play");
+                    }
+                    else if ($("#carouselButton").children("span").hasClass('fa-play')) {
+
+                        $('#mycarousel').carousel('cycle');
+                        $("#carouselButton").children("span").removeClass("fa-play");
+                        $("#carouselButton").children("span").addClass("fa-pause");
+                    }
+                })
+                
             });
-        </script> -->
+</script>
 </body>
 
 </html>
