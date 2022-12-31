@@ -41,6 +41,15 @@ body {
       left: 0;
       min-height: 300px; }
 
+.modal-content {
+  color: floralwhite; }
+  .modal-content .modal-header {
+    background-color: #512da8; }
+    .modal-content .modal-header .close {
+      color: floralwhite; }
+  .modal-content .modal-body {
+    background-color: #9575cd; }
+
 .tab-content {
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd;
